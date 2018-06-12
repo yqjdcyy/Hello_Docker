@@ -1,5 +1,7 @@
 # Command to response the arges
-FROM hello-world
+FROM centos
 MAINTAINER yqjdcyy <yqjdcyy@gmail.com>
-# RUN yum -y install apr apr-utils
-# EXPOSE 3000
+COPY . /
+RUN echo "hello"
+RUN chmod +x resp
+CMD ./resp
