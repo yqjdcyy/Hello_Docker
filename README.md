@@ -89,7 +89,7 @@
 
 ### Server
 - 描述
-    - 指定端口（默认8888）开启服务，提供 `/call` 固定返回 `CALL.SUCCESS`
+    - 指定端口（默认8888）开启服务，提供 `/call` 固定返回 `CALL.BACK`
 - 操作
     - `docker imagee build -t yqjdcyy/hello-world-server .`
         ```
