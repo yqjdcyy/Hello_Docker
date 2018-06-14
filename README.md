@@ -34,7 +34,22 @@
     - 空指令
 - 操作
     - `docker image build -t yqjdcyy/hello-world-empty .`
-    - `docker container run yqjdcyy/hello-world-empty`
+        ```
+        Sending build context to Docker daemon  2.048kB
+        Step 1/2 : FROM centos
+        ---> 49f7960eb7e4
+        Step 2/2 : RUN /bin/sh -c echo "hello world"
+        ---> Running in e96051ef783e
+
+        Removing intermediate container e96051ef783e
+        ---> 61217d10b966
+        Successfully built 61217d10b966
+        Successfully tagged yqjdcyy/hello-world-empty:latest        
+        ```
+    - `docker run --rm -it yqjdcyy/hello-world-empty /bin/sh`
+        ```
+        sh-4.2#
+        ```
 
 ### Command
 - 描述
