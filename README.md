@@ -110,7 +110,7 @@
         Successfully built 97ab267a7baf
         Successfully tagged yqjdcyy/hello-world-server:latest
         ```
-    - `docker run -p 8030:3000 yqjdcyy/hello-world-server   `
+    - `docker run -p 8030:3000 yqjdcyy/hello-world-server`
         ```
         Server start at :3000
         ```
@@ -122,6 +122,33 @@
 
 ### Server-Redis
 - 描述
-    - 
+    - 支持 `Redis` 的服务
 - 操作
-    - 
+    - 请先按照 `../redis/README.md` 启动 `Reids`
+    - `docker [image] build -t yqjdcyy/hello-docker-server-redis .`
+        ```
+        Sending build context to Docker daemon  7.194MB
+        Step 1/5 : FROM centos
+        ---> 49f7960eb7e4
+        Step 2/5 : MAINTAINER yqjdcyy <yqjdcyy@gmail.com>
+        ---> Running in 4b932b06bf20
+        Removing intermediate container 4b932b06bf20
+        ---> 97bff887c61a
+        Step 3/5 : COPY . /
+        ---> 033030de61fd
+        Step 4/5 : RUN chmod +x server
+        ---> Running in 398732e1bf86
+        Removing intermediate container 398732e1bf86
+        ---> c2c4c5007f20
+        Step 5/5 : CMD ./server -port=3000 -addr=localhost:6379
+        ---> Running in 39f6279ebf76
+        Removing intermediate container 39f6279ebf76
+        ---> 719139c2b17d
+        Successfully built 719139c2b17d
+        Successfully tagged yqjdcyy/hello-docker-server-redis:latest
+        ```
+
+    - `docker run -d -p:8031:3000 yqjdcyy/hello-docker-server-redis`
+        ```
+        c117703a542519dbb9c7b51761883c96ebdbe89d5d7facf7839d0b2cac255e1e
+        ```

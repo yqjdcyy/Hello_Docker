@@ -1,5 +1,3 @@
-
-
 # Install
 ## Search
 - `docker search redis`
@@ -64,7 +62,6 @@
 - `docker exec -it 8be998175aeb redis-cli`
 
 
-
 # Reference
 - [Docker 安装 Redis](http://www.runoob.com/docker/docker-install-redis.html)
-
+- [redis](https://docs.docker.com/samples/library/redis/)
