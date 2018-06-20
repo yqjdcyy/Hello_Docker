@@ -13,8 +13,7 @@ services:
 
 # docker run -p 8030:6379 -v /data/redis/data:/data -d redis redis-server --appendonly yes
   redis:
-    build:
-      image: "redis"
+    image: "redis"
     ports:
         - "8030:6379"
     volumes:
