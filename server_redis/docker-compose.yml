@@ -1,0 +1,21 @@
+version: '3'
+services:
+  # docker run -d -p:8031:3000 yqjdcyy/hello-docker-server-redis
+  # docker.run.-d -> docker-compose.option.-d
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      depends_on:
+        - redis
+      ports:
+        - "8031:3000"
+
+# docker run -p 8030:6379 -v /data/redis/data:/data -d redis redis-server --appendonly yes
+  redis:
+    build:
+      image: "redis"
+      ports:
+          - "8030:6379"
+      volumes:
+          - "/data/redis/data:/data"
